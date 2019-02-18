@@ -1,0 +1,23 @@
+{% extends 'moviesaver/header.html' %}
+
+{% block content %}
+
+	<div class="container">
+		{% for sec in all_movie %}
+		    <div class="col s6 m4">
+		    	<div class="card small">
+			        <div class="card-image">
+			          <img src="https://image.shutterstock.com/image-photo/photo-old-movie-projector-260nw-92369284.jpg">
+			          <span class="card-title">{{sec.section_name}}</span>
+			        </div>
+			        <div class="card-content">
+			          <p>Список всех {{sec.section_name}}</p>
+			        </div>
+			        <div class="card-action">
+			          <a href="/films">Ссылка</a>
+			        </div>
+		    	</div>
+		    </div>
+		{% endfor %}
+	</div>
+{% endblock %}

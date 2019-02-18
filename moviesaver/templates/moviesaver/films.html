@@ -1,0 +1,22 @@
+{% extends 'moviesaver/header.html' %}
+
+{% block content %}
+	<div class="container">
+		{% for sec in all_movie %}
+			<div class="card small">
+			    <div class="card-image waves-effect waves-block waves-light">
+			      <img class="activator" src="https://img.lovepik.com/element/40027/6519.png_860.png!/fw/562">
+			    </div>
+			    <div class="card-content">
+			      <span class="card-title activator grey-text text-darken-4">{{sec.movie_name}}<i class="material-icons right">more_vert</i></span>
+			      <p><a href="#">Ссылка на фильм</a></p>
+			    </div>
+			    <div class="card-reveal">
+			      <span class="card-title grey-text text-darken-4">Название: {{sec.movie_name}}<i class="material-icons right">Закрыть</i></span>
+			      <p>Статус: {{sec.status}}</p>
+			      <p>Дата примьеры: {{sec.release_date}}</p>
+			    </div>
+		  	</div>
+	    {% endfor %}
+	</div>
+{% endblock %}

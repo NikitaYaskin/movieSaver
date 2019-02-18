@@ -1,0 +1,9 @@
+<li><a href="/">Главная</a></li>
+<li><a href="/sections">Разделы</a></li>
+{% if user.is_authenticated %}
+    <li><a href="/account">{{user.username|title}}</a></li>
+    <li><a href="/logout">Выйти</a></li>
+{% else %}
+	<li><a href="/login">Войти</a></li>
+	<li><a href="/register">Зарегистрироваться</a></li>
+{% endif %}
